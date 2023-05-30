@@ -6,9 +6,9 @@
 # include <stdio.h>
 # include "ft_printf.h"
 
-size_t  ft_strlen(const char *s);
 int ft_printf(const char *str, ...);
-
+int	ft_atoi(char nptr);
+size_t  ft_strlen(const char *s);
 
 
 #endif 
