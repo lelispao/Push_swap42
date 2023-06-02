@@ -6,8 +6,14 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:13:33 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/05/30 17:14:18 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:06:42 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	rr(t_stack* stack_a , t_stack* stack_b)
+{
+	ra(stack_a);
+	rb(stack_b);
+}

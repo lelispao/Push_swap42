@@ -6,13 +6,13 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:08:48 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/05/30 17:10:37 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/05/31 14:50:18 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(char nptr)
+int	ft_atoi(char *nptr)
 {
 	int	i;
 	int	nm;

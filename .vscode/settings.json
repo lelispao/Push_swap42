@@ -1,5 +1,19 @@
 {
     "files.associations": {
-        "stdlib.h": "c"
-    }
+		"stdlib.h": "c",
+		"random": "c",
+		"type_traits": "c"
+	},
+    "cSpell.words": [
+		"bcurrent",
+		"doublecap",
+		"mywrite",
+		"pusha",
+		"recussion",
+		"stacka",
+		"stackb",
+		"swapa",
+		"swapb"
+	],
+	"C_Cpp.errorSquiggles": "disabled"
 }
