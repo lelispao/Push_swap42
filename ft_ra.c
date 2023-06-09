@@ -6,7 +6,7 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:13:28 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/06/02 15:07:48 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/06/08 13:22:50 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@
 // 	return (stack);
 // }
 
-void	ra(t_stack *stack_a)
+void	ra(t_stack stack_a)
 {
 	int	temp;
 
-	if (stack_a == NULL || stack_a->next == NULL)
+	if (!stack_a.size)
 		return ;
-	temp = stack_a->value;
-	while (stack_a->next)
+	temp = stack_a.stack->value;
+	while (stack_a.stack->next)
 	{
-		stack_a->value = stack_a->next->value;
-		stack_a = stack_a->next;
+		stack_a.stack->value = stack_a.stack->next->value;
+		stack_a.stack = stack_a.stack->next;
 	}
-	stack_a->value = temp;
+	stack_a.stack->value = temp;
 }

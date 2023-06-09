@@ -6,24 +6,38 @@
 # include <stdio.h>
 # include "../ft_printf/ft_printf.h"
 
-typedef struct  s_stack
+typedef struct  node
 {
-    int maxsize;
-    int top;
-	int	size;
     int value;
-    struct  s_stack *next;
-}   t_stack;
+    struct  node *next;
+	struct  node *prev;
+}   t_node;
+typedef struct	stack
+{
+	t_node *stack;
+	int	size;
+}	t_stack;
 
-void	printList(t_stack *a);
 int     ft_atoi(char *nptr);
-size_t  ft_strlen(const char *s);
 int     ft_printf(const char *str, ...);
-void	ra(t_stack* stack_a);
-void	rb(t_stack *stack_b);
-void	rr(t_stack* stack_a , t_stack* stack_b);
 
-//t_stack *last_node(t_stack stack);
+size_t  ft_strlen(const char *s);
+
+void	printList(t_stack a);
+void	ra(t_stack stack_a);
+void	rb(t_stack stack_b);
+void	rr(t_node *stack_a , t_node *stack_b);
+void	sa(t_stack *a);
+void	sb(t_node *b);
+void	rr(t_node *a , t_node *b);
+void	rra(t_node** stack_a);
+void	pa(t_stack *a, t_stack *b);
+void	pb(t_stack *a, t_stack *b);
+
+t_node	*reverse(t_node *stack);
+void	stack_creation(t_stack *stack, int argc, char **argv);
+//void	stack_pop(t_stack *a);
+//t_node *last_node(t_node stack);
 
 /*int     *ft_check(char  *string);
 void    mywrite(char c);

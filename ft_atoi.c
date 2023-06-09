@@ -6,7 +6,7 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:08:48 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/05/31 14:50:18 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/06/04 15:05:53 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	ft_atoi(char *nptr)
 
 	sign = 1;
 	i = 0;
+
 	while (nptr[i] == ' ' || nptr[i] == '\t'
 		|| nptr[i] == '\n' || nptr[i] == '\r'
 		|| nptr[i] == '\v' || nptr[i] == '\f')

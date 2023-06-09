@@ -1,0 +1,11 @@
+sa		xxxxxxxxxxxxxxxxxxx
+sb		xxxxxxxxxxxxxxxxxxx
+ss	  	xxxxxxxxxxxxxxxxxxx
+pa		xxxxxxxxxxxxxxxxxxx
+pb		xxxxxxxxxxxxxxxxxxx
+ra		xxxxxxxxxxxxxxxxxxx
+rb 		xxxxxxxxxxxxxxxxxxx
+rr	  	xxxxxxxxxxxxxxxxxxx
+rra
+rrb
+rrr

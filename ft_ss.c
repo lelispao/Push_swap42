@@ -6,8 +6,14 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:13:53 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/05/30 17:13:58 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/06/08 11:25:15 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	rr(t_node *a , t_node *b)
+{
+	sa(a);
+	sb(b);
+}
