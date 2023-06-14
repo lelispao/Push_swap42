@@ -19,10 +19,12 @@ typedef struct	stack
 }t_stack;
 int     ft_atoi(char *nptr);
 int     ft_printf(const char *str, ...);
+int	indexfinder(t_stack a);
+int	issorted(t_stack a);
 
 // size_t  ft_strlen(const char *s);
 
-void	printlist(t_stack a);
+void	printlist(const t_stack *a);
 void	sa(t_stack *a);
 void	sb(t_stack *b);
 void	ss(t_stack a, t_stack b);
@@ -31,9 +33,11 @@ void	pb(t_stack *a, t_stack *b);
 void	ra(t_stack stack_a);
 void	rb(t_stack stack_b);
 void	rr(t_stack a, t_stack b);
-void	rra(t_stack a);
-void	rrb(t_stack b);
+void	rra(t_stack *a);
+void	rrb(t_stack *b);
 void	rrr(t_stack a, t_stack b);
 void	stack_creation(t_stack *stack, int argc, char **argv);
+void	minisort(t_stack *a);
+void	smallsort(t_stack *a, t_stack *b);
 
 #endif

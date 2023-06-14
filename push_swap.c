@@ -6,7 +6,7 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 16:29:28 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/06/09 14:19:28 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/06/14 15:01:50 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,28 @@
 
 int	main(int argc, char **argv)
 {
-	t_stack	stack_temp;
-	//t_stack stack_tempb;
-	stack_creation(&stack_temp, argc, argv);
-	//stack_creation(&stack_tempb,argc, argv);
-	printlist(stack_temp);
-	//ra(stack_temp);
-	rra(stack_temp);
-	printlist(stack_temp);
-	// printlist(stack_tempb);
-	// printlist(stack_temp);
+	t_stack	a;
+	t_stack b;
+	stack_creation(&a, argc, argv);
+	stack_creation(&b,argc, argv);
+	if (argc == 2)
+	{
+		printlist(&a);
+		return (0);
+	}
+	if (argc <= 4)
+		minisort(&a); // 3
+	if (argc <= 6)
+		smallsort(&a, &b);
+	// smallsort(a,b); // 5
+	// midsort(a,b); // 10
+	// thebigsort(a,b); //??
+	//ra(a);
+	//rra(a);
+	printlist(&a);
+	// printlist(b);
+	// printlist(a);
 	/*if (ft_check(*argv) == 0)
-		ft_error();
-	//temp = ft_atoi(filling(*argv));
-	ft_code(*temp);*/
+		ft_error();*/
 	return (0);
 }

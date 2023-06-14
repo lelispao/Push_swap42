@@ -6,21 +6,23 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:23:53 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/06/09 14:03:07 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/06/14 14:34:42 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	printlist(t_stack a)
+void	printlist(const t_stack *a)
 {
-	if (a.size == 0)
+	t_node	*current;
+
+	current = a->stack;
+	if (a->size == 0)
 		return ;
-	while (a.size)
+	while (current)
 	{
-		printf(" list:%d\n", a.stack->value);
-		a.stack = a.stack->next;
-		a.size--;
+		printf(" list:%d\n", current->value);
+		current = current->next;
 	}
 	printf("\n");
 }
