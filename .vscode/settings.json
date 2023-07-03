@@ -3,7 +3,20 @@
 		"stdlib.h": "c",
 		"random": "c",
 		"type_traits": "c",
-		"push_swap.h": "c"
+		"push_swap.h": "c",
+		"array": "c",
+		"bitset": "c",
+		"string_view": "c",
+		"initializer_list": "c",
+		"ranges": "c",
+		"span": "c",
+		"regex": "c",
+		"utility": "c",
+		"chrono": "c",
+		"limits": "c",
+		"semaphore": "c",
+		"algorithm": "c",
+		"list": "c"
 	},
     "cSpell.words": [
 		"bcurrent",

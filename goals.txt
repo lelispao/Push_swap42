@@ -1,11 +1,72 @@
-sa		xxxxxxxxxxxxxxxxxxx
-sb		xxxxxxxxxxxxxxxxxxx
-ss	  	xxxxxxxxxxxxxxxxxxx
-pa		xxxxxxxxxxxxxxxxxxx
-pb		xxxxxxxxxxxxxxxxxxx
-ra		xxxxxxxxxxxxxxxxxxx
-rb 		xxxxxxxxxxxxxxxxxxx
-rr	  	xxxxxxxxxxxxxxxxxxx
-rra
-rrb
-rrr
+if a is in the big half push | but if its not the biggest one
+
+//so i theoretically got the numbers i want to push
+now i have sort a;
+
+\
+** push all the b first and then the small big("sb") ones if meta a bigger then next a swap
+so
+[2 ,3 13 ,11 , 5 ,34]
+[s ,s, b, sb,  s,  b]
+becomes 
+rra rra rra pa  
+[5 34 2 3 13]			[11]
+[s  b  s s b]
+
+|  rra pa |
+
+[5 34 2 3]			[13 11]
+|ra pa 
+[2 3 5]			[34 13 11 ]
+pb ra pb ra pb ra
+
+***** malon mlkia gt prepei na stilw ta mikra kalitera bruhhhh should be faster
+
+hmm also i should start shorting a while pushing to b using rrr would be good but i need checks
+
+
+2
+3
+5
+216
+				4746        m
+				2346		m
+34
+				234232323   b
+6
+56
+				5472372     b
+				234234      b
+
+an ine megalitera apo to 3rd big tote push 
+
+
+2				kk //smallese
+3				k
+5				k
+316				n	//bisggest
+43				n
+6				k
+56				n 
+
+hmm maybe now i can try the agc rule 
+and do strlen for when do i use ra or rra cause if
+position = len / 2 + 1 > to number else rra havent thought it through
+so think again 
+so do i first do the 10s the 100s or the 1000s
+
+biggest or smallest first decide
+
+hmm ok sort argv[0] first and then the rest
+maybe i choose what gets you next to ther closest next number px
+for this 
+you can ra and then sa since its the small and second smallest
+121			n
+1			k
+312			n
+4			k
+1233		n
+5			k
+234222		n
+17			k
+ta megalitera ine pano

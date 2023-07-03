@@ -6,13 +6,13 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:23:53 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/06/14 14:34:42 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/06/28 16:30:39 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	printlist(const t_stack *a)
+void	printlist(const t_stack *a, char stack_name)
 {
 	t_node	*current;
 
@@ -21,7 +21,7 @@ void	printlist(const t_stack *a)
 		return ;
 	while (current)
 	{
-		printf(" list:%d\n", current->value);
+		printf("%c:%d\n", stack_name, current->value);
 		current = current->next;
 	}
 	printf("\n");

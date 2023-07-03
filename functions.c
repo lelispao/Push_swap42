@@ -6,7 +6,7 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:20:10 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/06/13 18:30:18 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/06/22 11:25:58 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,24 @@ int	ft_atoi(char *nptr)
 		i++;
 	}
 	return (nm * sign);
+}
+
+int	stringlen(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+void	max_or_min(t_stack *a, int max, int min)
+{
+	while (max != 1 && min != 1)
+	{
+		ra(*a);
+		max = indexfinder(*a);
+		min = minfinder(*a);
+	}
 }

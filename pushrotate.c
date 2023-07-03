@@ -6,32 +6,44 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:13:21 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/06/09 14:18:16 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/06/15 13:54:35 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(t_stack *a, t_stack *b)
+void	push(t_stack *source, t_stack *dest)
 {
-	if (!b || !a)
-		return ;
-	b->stack->next = a->stack;
-	b->size++;
-	a->stack->prev = a->stack;
-	a->stack = a->stack->next;
-	a->size--;
+	t_node	*temp;
+
+	temp = source->stack;
+	source->stack = source->stack->next;
+	temp->prev = NULL;
+	if (source->stack)
+		source->stack->prev = NULL;
+	if (!dest->size)
+	{
+		dest->stack = temp;
+		temp->next = NULL;
+	}
+	else
+	{
+		temp->next = dest->stack;
+		temp->next->prev = temp;
+		dest->stack = temp;
+	}
+	dest->size++;
+	source->size--;
 }
 
 void	pb(t_stack *a, t_stack *b)
 {
-	if (!b || !a)
-		return ;
-	a->stack->next = b->stack;
-	a->size++;
-	b->stack->prev = b->stack;
-	b->stack = b->stack->next;
-	b->size--;
+	push(a, b);
+}
+
+void	pa(t_stack *b, t_stack *a)
+{
+	push(b, a);
 }
 
 void	ra(t_stack stack_a)
@@ -62,10 +74,4 @@ void	rb(t_stack stack_b)
 		stack_b.stack = stack_b.stack->next;
 	}
 	stack_b.stack->value = temp;
-}
-
-void	rr(t_stack stack_a, t_stack stack_b)
-{
-	ra(stack_a);
-	rb(stack_b);
 }

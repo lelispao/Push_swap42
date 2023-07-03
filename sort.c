@@ -6,7 +6,7 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 11:10:12 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/06/14 17:15:53 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/06/15 13:32:33 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,104 +95,25 @@ void	smallsort(t_stack *a)
 	int	min;
 
 	max = indexfinder(*a);
-	printf("max:%i\n",max);
 	min = minfinder(*a);
-	printf("min:%i\n",min);
-	if (max == 3 && min == 1 || max == 3 && min == 4)
+	if (max == 3 && min == 1 || max == 3 && min == 4
+		|| max == 2 && min == 3 || max == 1 && min == 4)
+		firstsmall(a, min, max);
+	if (max == 1 && min == 2 || max == 2 && min == 4
+		|| max == 4 && min == 3 || max == 3 && min == 2)
+		secondsmall(a, min, max);
+	if (max == 4 && min == 2 || max == 2 && min == 1
+		|| max == 1 && min == 3)
 	{
-		rra(a);
+		sa(a);
 		if (min == 1)
-			sa(a);
-		if (issorted(*a) == 0)
-			classic_op(a);
+			ra(*a);
+		if (min == 3)
+		{
+			rra(a);
+			rra(a);
+		}
 	}
-	if (max == 3 && min == 2)
-	{
-		ra(*a);
-		sa(a);
-		ra(*a);
-		if (issorted(*a) == 0)
-			classic_op(a);
-	}
-	if (max == 4 && min == 1)
-	{
-		if (issorted(*a) == 0)
-			classic_op(a);
-	}
-	if (max == 4 && min == 2)
-	{
-		sa(a);
-		if (issorted(*a) == 0)
-			classic_op(a);
-	}
-	if (max == 4 && min == 3)
-	{
-		///  push b ra push a is 1 less****
-		ra(*a);
-		ra(*a);
-		sa(a);
-		ra(*a);
-		if (issorted(*a) == 0)
-			classic_op(a);
-	}
-	if (max == 2 && min == 1)
-	{
-		sa(a);
-		ra(*a);
-		if (issorted(*a) == 0)
-			classic_op(a);
-	}
-	if (max == 2 && min == 3)
-	{
-		rra(a);
-		rra(a);
-		if (issorted(*a) == 0)
-			classic_op(a);
-	}
-	if (max == 2 && min == 4)
-	{
-		ra(*a);
-		sa(a);
-		ra(*a);
-		ra(*a);
-		if (issorted(*a) == 0)
-			classic_op(a);
-	}
-	if (max == 1 && min == 2)
-	{
-		ra(*a);
-		if (issorted(*a) == 0)
-			classic_op(a);
-	}
-	if (max == 1 && min == 3)
-	{
-		sa(a);
-		rra(a);
-		rra(a);
-		if (issorted(*a) == 0)
-			classic_op(a);
-	}
-	if (max == 1 && min == 4)
-	{
-		rra(a);
-		sa(a);
-		ra(*a);
-		if (issorted(*a) == 0)
-			classic_op(a);
-	}
+	if (issorted(*a) == 0)
+		classic_op(a);
 }
-
-// midsort(a, b) mexrh10
-// {
-// }  
-//
-// d	2		
-// d	4	
-// d	3	
-// d	5	
-// d	6
-// d
-// d
-// d
-
-// d
