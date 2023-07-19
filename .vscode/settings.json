@@ -16,7 +16,8 @@
 		"limits": "c",
 		"semaphore": "c",
 		"algorithm": "c",
-		"list": "c"
+		"list": "c",
+		"numbers": "c"
 	},
     "cSpell.words": [
 		"bcurrent",

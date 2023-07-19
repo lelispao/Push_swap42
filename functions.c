@@ -6,7 +6,7 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:20:10 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/06/22 11:25:58 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/07/19 12:11:29 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,16 @@ int	stringlen(char *s)
 	return (i);
 }
 
+int	numlen(int *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
 void	max_or_min(t_stack *a, int max, int min)
 {
 	while (max != 1 && min != 1)
@@ -57,4 +67,16 @@ void	max_or_min(t_stack *a, int max, int min)
 		max = indexfinder(*a);
 		min = minfinder(*a);
 	}
+}
+
+char	*deafaultlist(int argc, char **argv)
+{
+	int i;
+	char *list;
+
+	list = malloc((argc - 1) * sizeof(char)); 
+	i = 1;
+	while (i < argc- 1)
+		list[i] = ft_atoi(argv[i]);
+	return (list);
 }

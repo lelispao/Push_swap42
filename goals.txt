@@ -41,7 +41,7 @@ hmm also i should start shorting a while pushing to b using rrr would be good bu
 an ine megalitera apo to 3rd big tote push 
 
 
-2				kk //smallese
+2				kk //smallese		index if you rra  count is 2
 3				k
 5				k
 316				n	//bisggest
@@ -70,3 +70,50 @@ you can ra and then sa since its the small and second smallest
 234222		n
 17			k
 ta megalitera ine pano
+
+
+
+
+
+
+
+
+2				i 1 
+3				i 2
+5				i 3
+316				i 7   (last) 
+43				i 6   (2nd last)
+6				i 4
+56	            i 5
+
+
+316				i 7   (last) 
+43				i 6   (2nd last)
+6				i 4
+56	            i 5
+2				i 1 
+3				i 2
+5				i 3
+
+
+ok phgenw auto p ine to epomeno gia na ine ola sorted deutero k
+ksekinaw ta trades
+apla vlepw an ine gia reverse an ine 
+
+
+
+
+OK SO indexplacement IS A LIST WITH INDEX OF WHERE EVERYTHING SHOULD GO
+
+
+3				i 1
+5				i 2
+21322			i 7 (last) 
+316				i 6  
+43				i 5   (2nd last)
+6				i 3
+56	            i 4
+
+i think we haave a problem with hmm placement of indexplacement
+and i think the list is not updated and has big ones too
+the problemis that its nogetting updated althought its copy pasted

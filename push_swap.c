@@ -6,7 +6,7 @@
 /*   By: lkioukou <lkioukou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 16:29:28 by lkioukou          #+#    #+#             */
-/*   Updated: 2023/06/28 16:31:15 by lkioukou         ###   ########.fr       */
+/*   Updated: 2023/07/04 15:24:45 by lkioukou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	main(int argc, char **argv)
 	t_stack	a;
 	t_stack	b;
 
+	printf("skata");
 	stack_creation(&a, argc, argv);
 	stack_creation(&b, 0, argv);
 	/*if (ft_check(*argv) == 0)
