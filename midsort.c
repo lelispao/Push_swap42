@@ -370,7 +370,7 @@ int		*s_int_ra(int *s)
 		while(issorted(*a) == 0)
 		{
 			place_counter = 0;
-			i = 0;
+			i = 0;//this causes infinite
 			while(indexplacement[i])
 			{
 				//  for (int i = 0; i < a->size; i++) {
@@ -394,17 +394,17 @@ int		*s_int_ra(int *s)
 					temp = indexplacement[place_counter];
 					printf("temp be like %i\n",temp);
 
-					while (indexplacement[place_counter] != temp + 1  && place_counter < asize)////////////////so i dont get inside here at all
+					while (place_counter < asize && indexplacement[place_counter] <= temp)////////////////so i dont get inside here at all//place_counter < asize idk if this is needed
 					{
 						printf("indexplacement[place_counter]: %li\n", indexplacement[place_counter]);
 						printf("temp + 1: %i\n", temp + 1);
 						gap++;
-						printf("gap be like %i\n", gap);
+						printf("insidegap be like %i\n", gap);
 						place_counter++;
 					}
 					printf("gap be like %i\n",gap);
 
-					temp = gap;
+					temp = gap; // idk if this is needed
 					printf("we inside 4 outside\n");
 
 					while (gap > 0)
@@ -432,6 +432,8 @@ int		*s_int_ra(int *s)
 				}
 				i++;
 			}
+		}
+		return (function_counter);
 			// while (place_counter > 0)
 			// {
 			// 	ra(a);
@@ -444,8 +446,6 @@ int		*s_int_ra(int *s)
 			// ra(*a);
 			// s = sra(s);
 			//function_counter++;
-		}
-		return (function_counter);
 	}
 
 	int	bbool(char *s)
